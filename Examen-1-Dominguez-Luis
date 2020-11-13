@@ -35,12 +35,6 @@
     function eliminar(){
         ListPro.removeChild(ListPro.children[prompt("Ingrese la pelicula que quiere borrar(las celdas estan contabilisados por numeros iniciando por 0 hasta el maximo de la pelicula que pusiste)")]);
     };
-    function combinar(){
-        const listPelFavPr = document.getElementById('ListPLFL');
-        const newFavPL = document.createElement('li');
-        newFavPL.innerHTML = document.getElementById("ListPLFL").innerHTML;
-        ListPro.appendChild(newFavPL);
-    }
     </Script>
 </head>
 <body>
