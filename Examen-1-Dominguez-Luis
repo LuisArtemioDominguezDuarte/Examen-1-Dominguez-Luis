@@ -14,14 +14,17 @@
     };
    
 
-    function agregar(){
+    function agregarPersonaje(){
         const listPerFav = document.getElementById('listPF');
         const newFavPer = document.createElement('li');
         newFavPer.textContent= document.getElementById("perFavoritos").value;
         listPF.appendChild(newFavPer);
+
+    };
+    function agregarPelicula(){
         var peliFavorita = new Array();
         pelifav = peliFavorita.push(PeliFav());
-    };
+    }
     function PeliFav(){
         const listPelFav = document.getElementById('ListPro');
         const newFavPL = document.createElement('li');
@@ -51,7 +54,7 @@
             <label for="pelFavoritos" class="form_label">Pelicula Favorita: </label>
             <input type="text" id="pelFavoritos" name="pelFavoritos"> 
         </div>
-        <button id="button"onclick='agregar()' type="button" >Enviar</button><button id="button"onclick='eliminar()' type="button" >Eliminar</button>
+        <button id="button"onclick='agregarPersonaje()' type="button" >Agregar Personaje</button><button id="button"onclick='agregarPelicula()' type="button" >Agregar Pelicula</button><button id="button"onclick='eliminar()' type="button" >Eliminar</button>
     </form>
     <p id="listN">Nombre: </p>
     <br>
