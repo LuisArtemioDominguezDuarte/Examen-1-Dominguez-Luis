@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="name" content="Luis Artemio Dominguez Duarte">
+    <meta name="descripcion" content="Utiliza metodos de DOM para agregar datos a las tablas">
+    <title>EXAMEN DOM</title>
+    <Script type="text/javascript">
+
+    function agregar(com){
+        const listname = document.getElementById('list');
+        const newName = document.createElement('li');
+        newName.textContent= document.getElementById("nombre").value;
+        list.appendChild(newName);
+
+        const listnumbreControl = document.getElementById('listNC');
+        const newNumC = document.createElement('li');
+        newNumC.textContent= document.getElementById("numControl").value;
+        listNC.appendChild(newNumC);
+
+        const listPerFav = document.getElementById('listPF');
+        const newFavPer = document.createElement('li');
+        newFavPer.textContent= document.getElementById("perFavoritos").value;
+        listPF.appendChild(newFavPer);
+        var peliFavorita = new Array();
+        pelifav = peliFavorita.push(PeliFav());
+        com=peliFavorita;
+    };
+    function PeliFav(){
+        const listPelFav = document.getElementById('listPLF');
+        const newFavPL = document.createElement('li');
+        newFavPL.textContent= document.getElementById("pelFavoritos").value;
+        listPLF.appendChild(newFavPL);
+    };
+
+    function eliminar(){
+        listPLF.removeChild(listPLF.children[prompt("Ingrese la pelicula que quiere borrar(las celdas estan contabilisados por numeros iniciando por 0 hasta el maximo de la pelicula que pusiste)")]);
+    };
+    function combinar(){
+        const listPelFavPr = document.getElementById('listPLF');
+        const newFavPL = document.createElement('li');
+        newFavPL.innerHTML = document.getElementById("listPLF").innerHTML;
+        ListPro.appendChild(newFavPL);
+    }
+    </Script>
+</head>
+<body>
+    <h1 id="title">Formulario</h1>
+    <form  class="form" id="form">
+        <div>
+            <label for="name" class="form_label">Nombre: </label>
+            <input type="text" id="nombre" name="nombre"> 
+        </div>
+        <div> 
+            <label for="numControl" class="form_label">Número de control: </label>
+            <input type="number" id="numControl" name="numControl"> 
+        </div>
+        <div>
+            <label for="perFavoritos" class="form_label">Personaje Favorito: </label>
+            <input type="text" id="perFavoritos" name="perFavoritos"> 
+        </div>
+        <div>
+            <label for="pelFavoritos" class="form_label">Pelicula Favorita: </label>
+            <input type="text" id="pelFavoritos" name="pelFavoritos"> 
+        </div>
+        <button id="button"onclick='agregar()' type="button" >Enviar</button><button id="button"onclick='eliminar()' type="button" >Eliminar</button><button id="button"onclick='combinar()' type="button" >Combinar</button>
+    </form>
+    <p id="list">Nombre: </p>
+
+    <p id="listNC">Número de control: </p>
+
+    <p id="listPF">Personajes favoritos</p>
+
+    <p id="listPLF">Películas favoritas</p>
+
+    <ol id="ListPro">
+        <li >Shrek</li>
+        <li >Un mundo feliz</li>
+        <li >La vida inútil de Pito Pérez</li>
+        <li >El club de la pelea</li>
+    </ol>
+</body>
+</html>
